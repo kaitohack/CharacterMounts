@@ -1,0 +1,11 @@
+## Interface: 110105
+## Title: Simple Favorite Mounts Per Character
+## Notes: 
+## Version: 0.1
+## LoadWith: Blizzard_Collections
+## SavedVariablesPerCharacter: PerCharacterCollectionDB
+
+Main.lua
+DataHandler.lua
+Localization.lua
+UI.Lua
