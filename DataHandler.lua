@@ -3,6 +3,24 @@ local _, Barn = ...
 function Barn.InitializeTables()
     if FlyingMounts == nil then FlyingMounts = {} end
     if GroundMounts == nil then GroundMounts = {} end
+
+    for id, name in pairs(PerCharacterCollectionDB) do
+      local bCanFly = Barn.CanMountFly(id)
+      local bIsFlyableAndGroundMount = Barn.FlyAndGroundMount(id)
+
+      if bCanFly then
+         -- Barn._DEBUG("mount added to Flyable", id, name)
+         tinsert(FlyingMounts, id, name)
+      end
+      if (not bCanFly) or bIsFlyableAndGroundMount then
+         -- Barn._DEBUG("mount added to ground", id, name) 
+         tinsert(GroundMounts, id, name)
+      end
+   end
+   --print("flying")
+   --table.foreach(FlyingMounts, print)
+   --print("Ground")
+   --table.foreach(GroundMounts, print)
 end
 
 -- Generate random Mount Id ---------------------------------------------------
@@ -123,26 +141,25 @@ end
 function Barn.FlyAndGroundMount(id)
    bRet = false
    if
-      id == 336  or -- Tyrael's Charger
-      id == 1929 or -- Inarius' Charger
-      id == 261  or -- Celestial Steed
+      id == 439  or -- Tyrael's Charger
+      id == 2605 or -- Inarius' Charger
+      id == 376  or -- Celestial Steed
       id == 454  or -- Cindermane Charger
-      id == 430  or -- Hearthsteed
-      id == 605  or -- Fiery Hearthsteed
-      id == 128  or -- Headless Horseman's Mount
-      id == 257  or -- Invincible
-      id == 410  or -- Ghastly Charger
-      id == 831  or -- Highlord's Golden Charger
-      id == 832  or -- Highlord's Valorous Charger
-      id == 833  or -- Highlord's Vengeful Charger
-      id == 834  or -- Highlord's Vigilant Charger
+      id == 547  or -- Hearthsteed
+      id == 1168  or -- Fiery Hearthsteed
+      id == 219  or -- Headless Horseman's Mount
+      id == 363  or -- Invincible
+      id == 532  or -- Ghastly Charger
+      id == 885  or -- Highlord's Golden Charger
+      id == 894  or -- Highlord's Valorous Charger
+      id == 892  or -- Highlord's Vengeful Charger
+      id == 893  or -- Highlord's Vigilant Charger
       id == 2726  or -- Felscorned Highlord's Charger
-      id == 840  or -- Netherlord's Accursed Wrathsteed
-      id == 839  or -- Netherlord's Brimstone Wrathsteed
-      id == 841  or -- Netherlord's Chaotic Wrathsteed
-      id == 864  or -- Ban-Lu, Grandmaster's Companion
+      id == 931  or -- Netherlord's Accursed Wrathsteed
+      id == 930  or -- Netherlord's Brimstone Wrathsteed
+      id == 898  or -- Netherlord's Chaotic Wrathsteed
       id == 1414 or -- Sinrunner Blanchy
-      id == 1814 or -- Shadow Dusk Dreamsaber
+      id == 864  or -- Ban-Lu, Grandmaster's Companion
       id == 2725 or -- Felscorned Grandmaster's Companion
       id == 1531 or -- Wen Lo, the River's Edge
       id == 1577 or -- Ash'adar, Harbinger of Dawn
