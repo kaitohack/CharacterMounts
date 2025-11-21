@@ -1,4 +1,4 @@
-## Interface: 110105
+## Interface: 110205
 ## Title: Character Mounts
 ## Notes: Simple Favorite Mounts Per Character
 ## Version: 0.1
