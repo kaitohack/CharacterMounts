@@ -3,8 +3,8 @@ local _, SFMPC = ...
 SFMPC.Lan = {}
 SFMPC.Lan["Default"] = 
 {
-	["ADD"] = "Add personal favorite",
-	["REMOVE"] = "Remove personal favorite"
+	["ADD"] = "Add Favorite (Character)",
+	["REMOVE"] = "Remove Favorite (Character)"
 }
 
 SFMPC.Lan["esES"] = 
