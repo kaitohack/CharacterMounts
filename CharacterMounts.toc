@@ -1,9 +1,21 @@
 ## Interface: 110105
-## Title: Simple Favorite Mounts Per Character
-## Notes: 
+## Title: Character Mounts
+## Notes: Simple Favorite Mounts Per Character
 ## Version: 0.1
 ## LoadWith: Blizzard_Collections
 ## SavedVariablesPerCharacter: PerCharacterCollectionDB
+## IconTexture: 413588
+## Category: Collections
+## Category-deDE: Kriegsmeutesammlungen
+## Category-esES: Colecciones de banda guerrera
+## Category-esMX: Colecciones de tropa
+## Category-frFR: Collections du bataillon
+## Category-itIT: Collezioni della Brigata
+## Category-koKR: 전투부대 수집품
+## Category-ptBR: Coleções do Bando de Guerra
+## Category-ruRU: Коллекции отряда
+## Category-zhCN: 战团藏品
+## Category-zhTW: 戰隊收藏
 
 Main.lua
 DataHandler.lua

@@ -126,7 +126,7 @@ function Barn.FlyAndGroundMount(id)
       id == 336  or -- Tyrael's Charger
       id == 1929 or -- Inarius' Charger
       id == 261  or -- Celestial Steed
-      id == 690  or -- Cindermane Charger
+      id == 454  or -- Cindermane Charger
       id == 430  or -- Hearthsteed
       id == 605  or -- Fiery Hearthsteed
       id == 128  or -- Headless Horseman's Mount
@@ -136,12 +136,33 @@ function Barn.FlyAndGroundMount(id)
       id == 832  or -- Highlord's Valorous Charger
       id == 833  or -- Highlord's Vengeful Charger
       id == 834  or -- Highlord's Vigilant Charger
+      id == 2726  or -- Felscorned Highlord's Charger
       id == 840  or -- Netherlord's Accursed Wrathsteed
       id == 839  or -- Netherlord's Brimstone Wrathsteed
       id == 841  or -- Netherlord's Chaotic Wrathsteed
-      id == 800  or -- Ban-Lu, Grandmaster's Companion
+      id == 864  or -- Ban-Lu, Grandmaster's Companion
       id == 1414 or -- Sinrunner Blanchy
-      id == 1998 -- Felscorned Grandmaster's Companion
+      id == 1814 or -- Shadow Dusk Dreamsaber
+      id == 2725 or -- Felscorned Grandmaster's Companion
+      id == 1531 or -- Wen Lo, the River's Edge
+      id == 1577 or -- Ash'adar, Harbinger of Dawn
+      id == 1216 or -- Priestess' Moonsaber
+      id == 1426 or -- Ascended Skymane
+      id == 2681 or -- Bonesteed of Bloodshed
+      id == 2683 or -- Bonesteed of Oblivion
+      id == 2682 or -- Bonesteed of Plague
+      id == 2679 or -- Bonesteed of Triumph
+      id == 2706 or -- Brimstone Courser
+      id == 961 or -- Lucid Nightmare
+      id == 1190 or -- Pureheart Courser
+      id == 942 or -- Wild Dreamrunner
+      id == 2705 or -- Chestnut Courser
+      id == 2678 or -- Gloomdark Nightmare
+      id == 2676 or -- Golden Sunrunner
+      id == 2677 or -- Turquoise Courser
+      id == 2675 or -- Twilight Courser
+      id == 1413 or -- Dauntless Duskrunner
+      id == 1307 -- Sundancer
       then
          bRet = true
    end
