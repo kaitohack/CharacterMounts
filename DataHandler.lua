@@ -1,8 +1,8 @@
 local _, Barn = ...
 
 function Barn.InitializeTables()
-    if PerCharacterCollectionDB.Flyable == nil then PerCharacterCollectionDB.Flyable = {} end
-    if PerCharacterCollectionDB.Ground == nil then PerCharacterCollectionDB.Ground = {} end
+    if FlyingMounts == nil then FlyingMounts = {} end
+    if GroundMounts == nil then GroundMounts = {} end
 end
 
 -- Generate random Mount Id ---------------------------------------------------
@@ -12,9 +12,9 @@ function Barn.GetRandomEntryID()
    local keys = {}
    local mountsList = nil
    if (canFly) then
-      mountList = PerCharacterCollectionDB.Flyable
+      mountList = FlyingMounts
    else
-      mountList = PerCharacterCollectionDB.Ground
+      mountList = GroundMounts
    end
    --table.foreach(mountList, print)
 
@@ -58,17 +58,17 @@ function Barn.SetFavorite(id)
          tinsert(PerCharacterCollectionDB, id, name)
          if bCanFly then
             Barn._DEBUG("mount added to Flyable", id, name)
-            tinsert(PerCharacterCollectionDB.Flyable, id, name)
+            tinsert(FlyingMounts, id, name)
          end
          if (not bCanFly) or bIsFlyableAndGroundMount then
             Barn._DEBUG("mount added to ground", id, name) 
-            tinsert(PerCharacterCollectionDB.Ground, id, name)
+            tinsert(GroundMounts, id, name)
          end
          bRet = true
       else
          PerCharacterCollectionDB[id] = nil
-         PerCharacterCollectionDB.Flyable[id] = nil
-         PerCharacterCollectionDB.Ground[id] = nil
+         FlyingMounts[id] = nil
+         GroundMounts[id] = nil
       end
    end
 
