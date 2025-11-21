@@ -5,12 +5,18 @@ SFMPC.Lan["Default"] =
 {
 	["ADD"] = "Add personal favorite",
 	["REMOVE"] = "Remove personal favorite"
+	["GROUND"] = "Set ground mount"
+	["FLY"] = "Set fly mount"
+	["FLY_AND_GROUND"] = "Set as flying and ground"
 }
 
 SFMPC.Lan["esES"] = 
 {
 	["ADD"] = "Establecer favorito (Personaje)",
-	["REMOVE"] = "Eliminar favorito (Personaje)",
+	["REMOVE"] = "Remove personal favorite"
+	["GROUND"] = "Set ground mount"
+	["FLY"] = "Set fly mount"
+	["FLY_AND_GROUND"] = "Set as flying and ground"
 }
 
 if (SFMPC.Loc == nil) then
