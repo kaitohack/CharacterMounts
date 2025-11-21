@@ -62,20 +62,26 @@ end)
 -- Contextual Menu ------------------------------------------------------------
 Menu.ModifyMenu("MENU_MOUNT_COLLECTION_MOUNT", function(ownerRegion, rootDescription, contextData)
    --local isUsable, _, _, _, _, _, _, menuMountID = select(5, C_MountJournal.GetDisplayedMountInfo(contextData));
-   local icon = ownerRegion
-   local id = C_MountJournal.GetMountFromSpell(icon.spellID)
+   local mountFrame = ownerRegion
+   local id = mountFrame.spellID and C_MountJournal.GetMountFromSpell(mountFrame.spellID)
+   if not id then
+      mountFrame = mountFrame:GetParent()
+      id = mountFrame.spellID and C_MountJournal.GetMountFromSpell(mountFrame.spellID)
+   end
    -- local name = C_MountJournal.GetMountInfoByID(id)
    -- Barn._DEBUG(id, name)
-   local isFavorite = Barn.IsFavorite(id)
-   local loc = GetLocale()
-   local text = isFavorite == true and Barn.Loc["REMOVE"] or Barn.Loc["ADD"]
-   rootDescription:CreateDivider()
-   rootDescription:CreateButton(text, function() 
-      bSet = Barn.SetFavorite(id)
-      Barn.ShowFavTexture(icon, bSet)
-      Barn.Sort()
-      --table.foreach(PerCharacterCollectionDB.Flyable, print)
-   end)
+   if id then
+      local isFavorite = Barn.IsFavorite(id)
+      local loc = GetLocale()
+      local text = isFavorite == true and Barn.Loc["REMOVE"] or Barn.Loc["ADD"]
+      rootDescription:CreateDivider()
+      rootDescription:CreateButton(text, function() 
+         bSet = Barn.SetFavorite(id)
+         Barn.ShowFavTexture(mountFrame, bSet)
+         Barn.Sort()
+         --table.foreach(PerCharacterCollectionDB.Flyable, print)
+      end)
+   end
 end)
 -------------------------------------------------------------------------------
 
