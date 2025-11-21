@@ -17,6 +17,6 @@ if (SFMPC.Loc == nil) then
 	if (SFMPC.Lan[GetLocale()] ~= nil) then
 		SFMPC.Loc = SFMPC.Lan[GetLocale()]
 	else
-		SFMPC.Loc = SFMPC.Loc["Default"]
+		SFMPC.Loc = SFMPC.Lan["Default"]
 	end
 end
