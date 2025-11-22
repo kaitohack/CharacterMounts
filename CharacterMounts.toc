@@ -1,7 +1,7 @@
 ## Interface: 110205
 ## Title: Character Mounts
 ## Notes: Simple Favorite Mounts Per Character
-## Version: 0.2
+## Version: 0.21
 ## LoadWith: Blizzard_Collections
 ## SavedVariablesPerCharacter: PerCharacterCollectionDB
 ## IconTexture: 413588
