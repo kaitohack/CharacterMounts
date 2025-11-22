@@ -1,0 +1,5 @@
+ignore:
+  - README.md
+  - .git
+  - .gitignore
+  - *.zip
