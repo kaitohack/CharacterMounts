@@ -3,3 +3,6 @@ ignore:
   - .git
   - .gitignore
   - *.zip
+
+move-folders:
+  /: CharacterMounts
