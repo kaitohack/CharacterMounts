@@ -3,4 +3,6 @@ ignore:
   - .git
   - .gitignore
   - *.zip
+  - *.sublime-workspace
+  - *.sublime-project
 
